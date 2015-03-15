@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = 'TODO: Write a short summary, because Rubygems requires one.'
   spec.description   = 'TODO: Write a longer description or delete this line.'
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = 'https://github.com/packsaddle/ruby-text_to_checkstyle'
   spec.license       = 'MIT'
 
   spec.files         = \
