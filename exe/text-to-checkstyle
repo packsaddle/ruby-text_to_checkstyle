@@ -1,3 +1,5 @@
 #!/usr/bin/env ruby
 
 require 'text_to_checkstyle'
+require 'text_to_checkstyle/cli'
+TextToCheckstyle::CLI.start(ARGV)
