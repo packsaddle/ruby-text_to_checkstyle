@@ -32,6 +32,7 @@ module TextToCheckstyle
           end
 
       fail(NoInputError) if !data || data.empty?
+      logger.info('data: ' + data)
     rescue StandardError => e
       suggest_messages(options)
       raise e
