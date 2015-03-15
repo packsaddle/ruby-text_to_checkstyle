@@ -1,5 +1,6 @@
 require 'logger'
 
+require 'text_to_checkstyle/converter'
 require 'text_to_checkstyle/error'
 require 'text_to_checkstyle/version'
 
