@@ -1,4 +1,5 @@
 require 'logger'
+require 'rexml/document'
 
 require 'text_to_checkstyle/converter'
 require 'text_to_checkstyle/error'
