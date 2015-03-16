@@ -18,7 +18,11 @@ module TextToCheckstyle
     option :verbose, type: :boolean, default: false
     option :data
     option :file
-
+    option :name, type: :string, default: Converter::FILE_NAME
+    option :line, type: :string, default: Converter::ERROR_LINE
+    option :column, type: :string, default: Converter::ERROR_COLUMN
+    option :severity, type: :string, default: Converter::ERROR_SEVERITY
+    option :source, type: :string, default: Converter::ERROR_SOURCE
     def convert
       setup_logger(options)
       data = \
@@ -32,7 +36,14 @@ module TextToCheckstyle
           end
 
       fail(NoInputError) if !data || data.empty?
-      puts ::TextToCheckstyle::Converter.convert(data)
+      params = {
+        name: options[:name],
+        line: options[:line],
+        column: options[:column],
+        severity: options[:severity],
+        source: options[:source]
+      }
+      puts ::TextToCheckstyle::Converter.convert(data, params)
     rescue StandardError => e
       suggest_messages(options)
       raise e
