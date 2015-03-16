@@ -5,7 +5,7 @@ module TextToCheckstyle
       logger.info(text: text)
 
       doc = REXML::Document.new
-      doc << REXML::XMLDecl.new
+      doc.add REXML::XMLDecl.new
       checkstyle = doc.add_element 'checkstyle'
       name = 'path/to/file'
       file = checkstyle.add_element 'file', 'name' => name
