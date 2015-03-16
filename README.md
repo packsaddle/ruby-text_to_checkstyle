@@ -3,6 +3,45 @@
 [![Gem Version](http://img.shields.io/gem/v/text_to_checkstyle.svg?style=flat)](http://badge.fury.io/rb/text_to_checkstyle)
 [![Build Status](http://img.shields.io/travis/packsaddle/ruby-text_to_checkstyle/master.svg?style=flat)](https://travis-ci.org/packsaddle/ruby-text_to_checkstyle)
 
+## Usage
+
+Text message to Checkstyle format.
+
+```bash
+$ echo -n "This line includes a error." | text-to-checkstyle
+<?xml version='1.0'?><checkstyle><file name='path/to/file'><error column='0' line='0' message='This line includes a error.' severity='info' source='TextToCheckstyle'/></file></checkstyle>
+```
+
+## Command
+
+```text
+Commands:
+  text-to-checkstyle convert         # Convert text to checkstyle
+  text-to-checkstyle help [COMMAND]  # Describe available commands or one specific command
+  text-to-checkstyle version         # Show the TextToCheckstyle version
+
+Usage:
+  text-to-checkstyle convert
+
+Options:
+  [--debug], [--no-debug]
+  [--verbose], [--no-verbose]
+  [--data=DATA]
+  [--file=FILE]
+  [--name=NAME]
+                               # Default: path/to/file
+  [--line=LINE]
+                               # Default: 0
+  [--column=COLUMN]
+                               # Default: 0
+  [--severity=SEVERITY]
+                               # Default: info
+  [--source=SOURCE]
+                               # Default: TextToCheckstyle
+
+Convert text to checkstyle
+```
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -18,10 +57,6 @@ And then execute:
 Or install it yourself as:
 
     $ gem install text_to_checkstyle
-
-## Usage
-
-TODO: Write usage instructions here
 
 ## Development
 
