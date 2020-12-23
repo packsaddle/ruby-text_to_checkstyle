@@ -1,7 +1,7 @@
 # TextToCheckstyle
 
 [![Gem Version](http://img.shields.io/gem/v/text_to_checkstyle.svg?style=flat)](http://badge.fury.io/rb/text_to_checkstyle)
-[![Build Status](http://img.shields.io/travis/packsaddle/ruby-text_to_checkstyle/master.svg?style=flat)](https://travis-ci.org/packsaddle/ruby-text_to_checkstyle)
+[![Build Status](https://img.shields.io/circleci/build/github/packsaddle/ruby-text_to_checkstyle?style=flat)](https://circleci.com/gh/packsaddle/ruby-text_to_checkstyle)
 
 ## Usage
 
